@@ -16,15 +16,10 @@ public class FileHandler  {
     
     FileHandler(){}
     
-    void readFile(String filename){
+    void readFile(String filename) throws FileNotFoundException{
         System.out.println("Attempting to read " + filename);        
-        try{            
-            long filesize = getFileSize(filename);        
-            System.out.println(filename + " size is " + filesize);
-        }
-        catch (FileNotFoundException e){
-           System.out.println("File missing");           
-        }        
+        long filesize = getFileSize(filename);        
+        System.out.println(filename + " size is " + filesize);        
     }
     
     long getFileSize(String filename) throws FileNotFoundException{
