@@ -27,6 +27,9 @@ public class Main {
             catch (FileNotFoundException e){
                 System.out.println("CRAP! file not found");            
             }
+            catch (FileSizeToolLargeException e){
+                System.out.println("Exception: " + filename + e.getMessage());            
+            }            
         }
     }
 }
